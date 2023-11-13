@@ -1,0 +1,349 @@
+/* Reset some default styles */
+body, h1, h2, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+small{
+    color: #fff;
+
+}
+
+.title{
+    margin-bottom: 30px;
+}
+/* Basic styling */
+body {
+    background-image: url('../img/rachmaninoff-concert-around-1940-aspect-ratio-16-9-2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+header {
+    background-color: #928d66;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+
+.timeline{
+    position: relative;
+    max-width: 1300px;
+    margin: 100px auto;
+}
+
+.container {
+    padding: 10px 50px;
+    position: relative;
+    width: calc(50% - 100px);
+
+    opacity: 1;
+}
+.container.checked{
+    animation: movedown 1s linear forwards;
+    opacity: 0;
+}
+@keyframes movedown{
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+.container.checked:nth-child(1){
+    animation-delay: 1s;
+}
+.container.checked:nth-child(2){
+    animation-delay: 6s;
+}
+.container.checked:nth-child(3){
+    animation-delay: 16s;
+}
+.container.checked:nth-child(4){
+    animation-delay: 24s;
+}
+.container.checked:nth-child(5){
+    animation-delay: 36s;
+}
+.container:nth-child(6){
+    animation-delay: 47s;
+}
+.container:nth-child(7){
+    animation-delay: 64.2s;
+}
+.container:nth-child(8){
+    animation-delay: 76s;
+}
+.container:nth-child(9){
+    animation-delay: 87s;
+}
+.container:nth-child(10){
+    animation-delay: 102s;
+}
+.container:nth-child(11){
+    animation-delay: 114s;
+}
+.container:nth-child(12){
+    animation-delay: 128s;
+}
+.container:nth-child(13){
+    animation-delay: 136s;
+}
+.container:nth-child(14){
+    animation-delay: 148s;
+}
+.container:nth-child(15){
+    animation-delay: 162s;
+}
+.container:nth-child(16){
+    animation-delay: 171s;
+}
+.container:nth-child(17){
+    animation-delay: 184s;
+}
+.container:nth-child(18){
+    animation-delay: 196s;
+}
+.container:nth-child(19){
+    animation-delay: 209s;
+}
+.container:nth-child(20){
+    animation-delay: 222s;
+}
+.container:nth-child(21){
+    animation-delay: 236s;
+}
+.container:nth-child(22){
+    animation-delay: 245s;
+}
+.container:nth-child(23){
+    animation-delay: 253s;
+}
+.container:nth-child(24){
+    animation-delay: 262s;
+}
+.container:nth-child(25){
+    animation-delay: 279s;
+}
+.container:nth-child(26){
+    animation-delay: 297s;
+}
+
+.container .year {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    right: -20px;
+    top: 32px;
+    z-index: 10;
+    background-color: #fff;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+.right-container .year{
+    left: -20px;
+}
+.biography{
+    position: relative;
+    background-color: rgba(170, 170, 170, 0.763);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px 30px;
+    font-size: 15px;
+}
+.biography h2 {
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #fff; 
+}
+.biography p {
+    color: #fff;
+}
+.biography small{
+    display: inline-block;
+    margin-bottom: 15px;
+}
+.left-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid rgba(255, 255, 255, 0.358);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    right: -14px;
+}
+.right-container-arrow{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 28px;
+    z-index: 1;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 15px solid rgba(255, 255, 255, 0.358);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    left: -14.5px;
+}
+
+
+.left-container{
+    left: 0;
+
+}
+
+.right-container{
+    left: 50%;
+}
+
+
+.timeline::after{
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 100%;
+    background: #fff;
+    top: 0;
+    left: 50%;
+    margin-left: -3px;
+    z-index: -1;
+    
+}
+.timeline::after.real{
+
+    animation: moveline 300s linear forwards;
+}
+
+@keyframes moveline{
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+
+
+
+
+footer {
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+    padding: 10px 0;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+    .timeline{
+        margin: 50px auto;
+    }
+    .timeline::after{
+        left: 31px;
+    }
+    .container{
+        width: 100%;
+        padding-left: 80px;
+        padding-right: 25px;
+    }
+    .biography{
+        font-size: 13px;
+    }
+    .biography small{
+        margin-bottom: 10px;
+    }
+    .right-container{
+        left: 0;
+    }
+    .left-container .year, .right-container .year{
+        left: 10px;
+    }
+    .left-container-arrow, .right-container-arrow{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+input[type="checkbox"]{
+    cursor: pointer;
+    position: fixed;
+    z-index: 100;
+    right: 30px;
+    top: 30px;
+    width: 80px;
+    height: 40px;
+    -webkit-appearance: none;
+    background: #c6c6c6;
+    outline: none;
+    border-radius: 20px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    transition: 0.5s;
+}
+input:checked[type="checkbox"]{
+    background: #4e4e4e;
+}
+input[type="checkbox"]:before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    top: 0;
+    left: 0;
+    background: #fff;
+    transform: scale(1.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,.2);
+    transition: .5s;
+}
+input:checked[type="checkbox"]:before{
+    left: 40px;
+    background: #ffffff;
+}

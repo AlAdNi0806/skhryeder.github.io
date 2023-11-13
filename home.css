@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    -webkit-user-select: none;  
+    -moz-user-select: none;    
+    -ms-user-select: none;      
+    user-select: none;
+}
+body{
+    background: #CFCCB7;
+    overflow: hidden;
+}
+.theme{
+    position: absolute;
+    top: 15px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    color: whitesmoke;
+    background: transparent;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+}
+.theme p{
+    display: inline-block;
+    padding: 15px;
+    border: 3px solid #3e3e3e;
+    background: #928d66;
+    border-radius: 20px;
+}
+.image-container {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+}
+.image-container img{
+    height: 100vh;
+    width: 500px;
+}
+.image-container::before {
+content: "";
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+width: 50%; 
+background: linear-gradient(to left, #CFCCB7  0%, rgba(255,255,255,0) 100%);
+}
+.image-container::after {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+height: 20%; 
+background: linear-gradient(to bottom, #CFCCB7  0%, rgba(255,255,255,0) 100%);
+}
+.rachietekst{
+    position: relative;
+    max-width: 500px;
+    text-align: left;
+    color: whitesmoke;
+    padding: 20px;
+    background: #3e3e3e;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 800;
+    font-size: 2rem;
+    margin-left: auto; 
+    right: 70px;
+    top:160px;
+    border-radius: 10px;
+    border: 10px solid rgb(225, 225, 225);
+    box-shadow: 0 0 30px rgba(0,0,0,0.9);
+}
+.buttons{
+    position: relative;
+    top: 20px;
+    margin-bottom: 20px;
+}
+.buttons a{
+    display: inline-block;
+    font-size: 14px;
+    color: white;
+    background: #4d9559;
+    border: 1px solid transparent;
+    padding: 8px 30px;
+    text-decoration: none;
+    font-weight: 500;
+    border-radius: 30px;
+    text-transform: uppercase;
+    transition: all .55s ease;
+    cursor: pointer;
+}
+
+.buttons a:hover{
+    background: transparent;
+    border: 1px solid #CFCCB7;
+    transform: translateX(8px);
+}
+
+.buttons a.ctaa{
+    background: transparent;
+    border: 1px solid #CFCCB7;
+    margin-left: 15px;
+}
+
+.buttons a.ctaa i{
+    vertical-align: middle;
+    margin-right: 5px;
+}
+@media(max-width: 700px){
+    .rachietekst{
+        margin-top: 10rem;
+        left: 20px;
+        min-width: none;
+        margin-right: 20px;
+        margin: 20px;
+    }
+    .theme{
+        margin-top: 20px;
+
+        margin-right: 0;
+    }
+    .image-container img{
+        height: 100vh;
+        width: 100%;
+    }
+}
