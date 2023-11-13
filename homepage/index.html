@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://fonts.googleapis.com/css2?family=Acme&family=Great+Vibes&display=swap" rel="stylesheet">
+        <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+  <!-- or -->
+  <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <h1>150 лет С.В. Рахманинову</h1>
+            <nav>
+              <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../musicpage/musicpage.html">Музыка</a></li>
+                <li><a href="../videopage/index.html">Видео</a></li>
+              </ul>
+            </nav>
+        </header>
+
+        <div class="content">
+            <div class="rachie">
+                <div class="cover">
+                    <p>Open on computer to open</p>
+                </div>
+                <div data-note="C3" class="key white note1"><p class="PianoKey">C</p><p class="KeyboardKey">(z)</p></div>
+                <div data-note="D3" class="key white note2"><p class="PianoKey">D</p><p class="KeyboardKey">(x)</p></div>
+                <div data-note="E3" class="key white note3"><p class="PianoKey">E</p><p class="KeyboardKey">(c)</p></div>
+                <div data-note="F3" class="key white note4"><p class="PianoKey">F</p><p class="KeyboardKey">(v)</p></div>
+                <div data-note="G3" class="key white note5"><p class="PianoKey">G</p><p class="KeyboardKey">(b)</p></div>
+                <div data-note="A3" class="key white note6"><p class="PianoKey">A</p><p class="KeyboardKey">(n)</p></div>
+                <div data-note="B3" class="key white note7"><p class="PianoKey">B</p><p class="KeyboardKey">(m)</p></div>
+                <div data-note="C4" class="key white note8"><p class="PianoKey">C</p><p class="KeyboardKey">(q)</p></div>
+            
+                <div data-note="Db3" class="key black note16"><p class="PianoKey">D♭</p><p class="KeyboardKey">(s)</p></div>
+                <div data-note="Eb3" class="key black note17"><p class="PianoKey">E♭</p><p class="KeyboardKey">(d)</p></div>
+                <div data-note="Gb3" class="key black note18"><p class="PianoKey">G♭</p><p class="KeyboardKey">(g)</p></div>
+                <div data-note="Ab3" class="key black note19"><p class="PianoKey">A♭</p><p class="KeyboardKey">(h)</p></div>
+                <div data-note="Bb3" class="key black note20"><p class="PianoKey">B♭</p><p class="KeyboardKey">(j)</p></div>
+                <div data-note="Db4" class="key black note21"><p class="PianoKey">D♭</p><p class="KeyboardKey">(2)</p></div>
+                <div class="wool-line"></div>
+
+                <div class="note"><H1 class="exactNote">-</H1></div>
+                
+                <div class="checkboxes">
+                    <div class="column keyboard-keys-checkbox">
+                        <input type="checkbox" class="keyboardCheckbox"><span>Keyboard-Keys</span>
+                    </div>
+                    <div class="column piano-keys-checkbox">
+                        <input type="checkbox" class="pianoCheckbox" checked><span>Piano-Keys</span> 
+                    </div>
+                </div>
+
+                <div class="rightContent">
+                    <div class="column volume-slider">
+                        <span>Volume</span><input type="range" min="0" max="1" value="0.5" step="any">
+                    </div>
+                    <div class="showOctavesCheckbox">
+                        <span>Show Octaves</span>
+                        <span class="switch">
+                            <input type="checkbox" id="switcher" class="octaveCheckbox" checked>
+                            <label for="switcher"></label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="item piano" onclick="changeMode(this)"><img src="../img/instruments/grand-piano.png"></div>
+            <div class="item harp" onclick="changeMode(this)"><img src="../img/instruments/harp.png"></div>
+            <div class="item accordion" onclick="changeMode(this)"><img src="../img/instruments/accordion.png"></div>
+            <div class="item guitar" onclick="changeMode(this)"><img src="../img/instruments/guitar.png"></div>
+            <div class="item drums" onclick="changeMode(this)"><img src="../img/instruments/drum-set.png"></div>
+            <div class="item violin" onclick="changeMode(this)"><img src="../img/instruments/violin.png"></div>
+            <div class="item trompet" onclick="changeMode(this)"><img src="../img/instruments/trumpet.png"></div>
+            <div class="item electricalGuitar" onclick="changeMode(this)"><img src="../img/instruments/electric-guitar.png"></div>
+        
+            <div class="rachieInform">
+                <div class="theme1">
+                    <p class="rach-theme1">Рахманинов<p class="kompo-theme1">Композитор</p></p>
+                </div>
+                <div class="citate-theme1">
+                    <cite>&nbsp;&nbsp;&nbsp;&nbsp;- &#171; Музыка прежде всего должна быть любима; должна идти от сердца и быть обращена к сердцу. Иначе музыку надо лишить надежды быть вечным и нетленным искусством&#187;.</cite>
+                </div>
+                <div class="theme1">
+                    <p class="text-theme1">&nbsp;&nbsp;&nbsp;&nbsp;Эти слова принадлежат С.Рахманинову - великому комозитору, гениальному пианисту и директору. Все важнейшие события русской общественной и художественной жизни отразились в его творческой судьбе, оставив неизгладимый след. Формирование и расцвет творчества Рахманинова приходится на 1890-1900-е гг., время, когда в русской культуре происходили сложнейшие процессы, духовный пульс бился лихорадно и нервно.</p>
+                </div>
+            </div>
+            <div class="rachieInform2">
+                <div class="citate-theme2">
+                    <cite>&nbsp;&nbsp;&nbsp;&nbsp;- &#171; Единственное, что я стараюсь делать, когда я сочиняю музыку — это заставить её прямо и просто выражать то, что у меня на сердце.&#187;</cite>
+                    <cite>&nbsp;&nbsp;&nbsp;&nbsp;- &#171; Уехав из России, я потерял желание сочинять.&#187;</cite>
+                </div>
+            </div>
+            <div class="circle1">
+                <img src="../musicpage/images/rachie1.jpg">
+            </div>
+            <div class="circle2">
+                <img src="../musicpage/images/rachie3.jpg">
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container-footer">
+                <div class="row-footer">
+                    <div class="footer-col">
+                        <h4>company</h4>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">our services</a></li>
+                            <li><a href="#">privacy policy</a></li>
+                            <li><a href="#">affiliate program</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>get help</h4>
+                        <ul>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">shipping</a></li>
+                            <li><a href="#">returns</a></li>
+                            <li><a href="#">order status</a></li>
+                            <li><a href="#">payment options</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>online shop</h4>
+                        <ul>
+                            <li><a href="#">watch</a></li>
+                            <li><a href="#">bag</a></li>
+                            <li><a href="#">shoes</a></li>
+                            <li><a href="#">dress</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <audio id="pianoC3" src="../notes/piano/C3.mp3"></audio>
+        <audio id="pianoDb3" src="../notes/piano/Db3.mp3"></audio>
+        <audio id="pianoD3" src="../notes/piano/D3.mp3"></audio>
+        <audio id="pianoEb3" src="../notes/piano/Eb3.mp3"></audio>
+        <audio id="pianoE3" src="../notes/piano/E3.mp3"></audio>
+        <audio id="pianoF3" src="../notes/piano/F3.mp3"></audio> 
+        <audio id="pianoGb3" src="../notes/piano/Gb3.mp3"></audio>
+        <audio id="pianoG3" src="../notes/piano/G3.mp3"></audio>
+        <audio id="pianoAb3" src="../notes/piano/Ab3.mp3"></audio>
+        <audio id="pianoA3" src="../notes/piano/A3.mp3"></audio>
+        <audio id="pianoBb3" src="../notes/piano/Bb3.mp3"></audio>
+        <audio id="pianoB3" src="../notes/piano/B3.mp3"></audio>
+        <audio id="pianoC4" src="../notes/piano/C4.mp3"></audio>
+        <audio id="pianoDb4" src="../notes/piano/Db4.mp3"></audio>
+        <audio id="pianoD4" src="../notes/piano/D4.mp3"></audio>
+        <audio id="pianoEb4" src="../notes/piano/Eb4.mp3"></audio>
+        <audio id="pianoE4" src="../notes/piano/E4.mp3"></audio>
+        <audio id="pianoF4" src="../notes/piano/F4.mp3"></audio> 
+        <audio id="pianoGb4" src="../notes/piano/Gb4.mp3"></audio>
+        <audio id="pianoG4" src="../notes/piano/G4.mp3"></audio>
+        <audio id="pianoAb4" src="../notes/piano/Ab4.mp3"></audio>
+        <audio id="pianoA4" src="../notes/piano/A4.mp3"></audio>
+        <audio id="pianoBb4" src="../notes/piano/Bb4.mp3"></audio>
+        <audio id="pianoB4" src="../notes/piano/B4.mp3"></audio>
+        <audio id="pianoC5" src="../notes/piano/C5.mp3"></audio>
+        <audio id="pianoDb5" src="../notes/piano/Db5.mp3"></audio>
+
+        <audio id="harpC3" src="notes/harp/C3.mp3"></audio>
+        <audio id="harpDb3" src="notes/harp/Db3.mp3"></audio>
+        <audio id="harpD3" src="notes/harp/D3.mp3"></audio>
+        <audio id="harpEb3" src="notes/harp/Eb3.mp3"></audio>
+        <audio id="harpE3" src="notes/harp/E3.mp3"></audio>
+        <audio id="harpF3" src="notes/harp/F3.mp3"></audio>
+        <audio id="harpGb3" src="notes/harp/Gb3.mp3"></audio>
+        <audio id="harpG3" src="notes/harp/G3.mp3"></audio>
+        <audio id="harpAb3" src="notes/harp/Ab3.mp3"></audio>
+        <audio id="harpA3" src="notes/harp/A3.mp3"></audio>
+        <audio id="harpBb3" src="notes/harp/Bb3.mp3"></audio>
+        <audio id="harpB3" src="notes/harp/B3.mp3"></audio>
+        <audio id="harpC4" src="notes/harp/C4.mp3"></audio>
+        <audio id="harpDb4" src="notes/harp/Db4.mp3"></audio>
+
+        <audio id="accordionC3" src="notes/accordion/C3.mp3"></audio>
+        <audio id="accordionDb3" src="notes/accordion/Db3.mp3"></audio>
+        <audio id="accordionD3" src="notes/accordion/D3.mp3"></audio>
+        <audio id="accordionEb3" src="notes/accordion/Eb3.mp3"></audio>
+        <audio id="accordionE3" src="notes/accordion/E3.mp3"></audio>
+        <audio id="accordionF3" src="notes/accordion/F3.mp3"></audio>
+        <audio id="accordionGb3" src="notes/accordion/Gb3.mp3"></audio>
+        <audio id="accordionG3" src="notes/accordion/G3.mp3"></audio>
+        <audio id="accordionAb3" src="notes/accordion/Ab3.mp3"></audio>
+        <audio id="accordionA3" src="notes/accordion/A3.mp3"></audio>
+        <audio id="accordionBb3" src="notes/accordion/Bb3.mp3"></audio>
+        <audio id="accordionB3" src="notes/accordion/B3.mp3"></audio>
+        <audio id="accordionC4" src="notes/accordion/C4.mp3"></audio>
+        <audio id="accordionDb4" src="notes/accordion/Db4.mp3"></audio>
+
+
+
+        
+    
+        <script src="script.js" async defer></script>
+    </body>
+</html>

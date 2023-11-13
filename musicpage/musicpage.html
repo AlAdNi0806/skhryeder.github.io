@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="musicpage.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="top_bar">
+                <button onclick="sidebar()"><i class="bx bx-chevron-right"></i></button>
+                <div class="options">
+                    <button><i class="bx bx-music"></i></button>
+                    <button><i class="bx bxs-volume-low"></i></button>
+                    <button><i class="bx bx-edit-alt"></i></button>
+                </div>
+                <button onclick="open_p()"><i class="bx bx-menu-alt-left"></i></button>
+            </div>
+            <div class="playing_part">
+                <div class="img">
+                    <img src="" alt="who plays" class="img_artist">
+                </div>
+            </div>
+            <div class="control_part">
+                <div class="song_title">
+                    <p class="song-title">song title</p>
+                    <p class="artist-name">artist name</p>
+                </div>
+                <div class="control_buttons">
+                    <div class="range_slider">
+                        <input type="range" min="0" max="100" id="slider" value="0" onchange="seekTo()">
+                        <p class="total_duration">3:00</p>
+                    </div>
+
+                    <div class="main_btns">
+                        <button id="previous" onclick="prevTrack()"><i class="bx bx-skip-previous"></i></buttons>
+                        <button id="play_btn" class="playpause-track" onclick="playpauseTrack()"><i class="bx bx-play"></i></buttons>
+                        <button id="next" onclick="nextTrack()"><i class="bx bx-skip-next"></i></buttons>
+                    </div>
+                </div>
+            </div>
+
+            <div class="playlist">
+                <div class="p_song first" onclick="playpauseTrack(); loadTrack(0)">
+                    <p id="p_title">Piano Concerto No. 2</p>
+                    <p id="p_artist">Rachmaninoff</p>
+                    <button><i class="bx bx-play"></i></button>
+                </div>
+
+                <div class="p_song second" onclick="playpauseTrack(); loadTrack(1)">
+                    <p id="p_title">Etude Tableau Op. 39</p>
+                    <p id="p_artist">Rachmaninoff</p>
+                    <button><i class="bx bx-play"></i></button>
+                </div>
+
+                <div class="p_song third" onclick="playpauseTrack(); loadTrack(2)">
+                    <p id="p_title">Prelude in C Sharp</p>
+                    <p id="p_artist">Rachmaninoff</p>
+                    <button><i class="bx bx-play"></i></button>
+                </div>
+
+                <div class="p_song fourth" onclick="playpauseTrack(); loadTrack(3)">
+                    <p id="p_title">Moment Musicaux No. 4</p>
+                    <p id="p_artist">Rachmaninoff</p>
+                    <button><i class="bx bx-play"></i></button>
+                </div>
+            </div>
+        </div>
+        
+        <script src="musicpage.js" async defer></script>
+    </body>
+</html>
