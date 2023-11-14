@@ -1,39 +1,141 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="home.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Poppins:wght@300;600&display=swap" rel="stylesheet">    
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рахманинов</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
-    <body>
-        
-        <div class="content">
-            <div class="theme">
-                <p>150 лет со дня рождения Сергея Рахманинова</p>
+
+<body>
+    <header class="container header">
+        <nav class="nav">
+            <div class="logo">
+                <h2>150 лет Рахманинову</h2>
             </div>
-            <div class="image-container">
-                <img src="rachie.jpg" alt="Rachmaninoff">
+
+            <div class="nav_menu" id="nav_menu">
+                <button class="close_btn" id="close_btn">
+                    <i class="ri-close-fill"></i>
+                </button>
+
+                <ul class="nav_menu_list">
+                    <li class="nav_menu_item">
+                        <a href="homepage/home.html" class="nav_menu_link">пианино</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="timeline/timeline.html" class="nav_menu_link">биография</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="musicpage/musicpage.html" class="nav_menu_link">музыка</a>
+                    </li>
+                    <li class="nav_menu_item">
+                        <a href="videopage/video.html" class="nav_menu_link">видео</a>
+                    </li>
+                </ul>
             </div>
-            <div class="rachietekst">
-                <p>Я русский композитор, и моя родина наложила отпечаток на мой характер и мои взгляды . Моя Музыка - это плод моего характера, и поэтому это русская музыка ...</p>
-                <div class="buttons">
-                    <a href="homepage/index.html">Пианино</a>
-                    <a href="../timeline/timeline.html" class="ctaa">Биография</a>
+
+            <button class="toggle_btn" id="toggle_btn">
+                <i class="ri-menu-line"></i>
+            </button>
+        </nav>
+    </header>
+
+    <section class="wrapper">
+        <div class="container">
+            <div class="grid-cols-2">
+                <div class="grid-item-1">
+                    <h1 class="main-heading">
+               Помним <span>ВеликогоРахманинова</span>
+               <br />
+              
+             <h3 class="main-heading" > Был
+                 <span class="multi-text"></span>
+                 <span class="blink"></span>
+               </h3>
+             </h1>
+                    <p class="info-text">
+                        "Я русский композитор, и моя родина наложила отпечаток на мой характер и мои взгляды."
+                    </p>
+
+                    <div class="btn_wrapper">
+                        <button class="btn view_more_btn" onclick="goToPiano()">
+                            Пианино <i class="ri-arrow-right-line"></i>
+                        </button>
+
+                        <button class="btn documentation_btn" onclick="goToBiography()">Биография</button>
+                    </div>
                 </div>
-            </div>  
-            <i class="fa-solid fa-bars"></i>
+                <div class="grid-item-2">
+                    <div class="team_img_wrapper">
+                        <img src="musicpage/images/rachie4.jpg" alt="team-img" />
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="home.js" async defer></script>
-    </body>
+    </section>
+
+    <section class="wrapper">
+        <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <div class="grid-cols-3">
+                <div class="grid-col-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                        </svg>
+                    </div>
+                    <div class="featured_info">
+                        <span>Курсовая по РКЧ </span>
+                        <p>
+                            Курсовая работа по разработке клиентских частей интернет-ресурсов - это возможность применить и углубить свои знания в области веб-разработки, а также создать интересный и функциональный веб-сайт.
+                        </p>
+                    </div>
+                </div>
+                <div class="grid-col-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14v6m-3-3h6M6 10h2a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2zm10 0h2a2 2 0 002-2V6a2 2 0 00-2-2h-2a2 2 0 00-2 2v2a2 2 0 002 2zM6 20h2a2 2 0 002-2v-2a2 2 0 00-2-2H6a2 2 0 00-2 2v2a2 2 0 002 2z"
+                            />
+                        </svg>
+                    </div>
+                    <div class="featured_info">
+                        <span>Современный дизайн</span>
+                        <p>
+                            Cтремление к непрерывному обновлению и улучшению, чтобы обеспечить продукт или проект, который будет актуален и привлекательным для современного пользователя.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-col-item">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </div>
+                    <div class="featured_info">
+                        <span>HTML CSS JavaScript</span>
+                        <p>
+                            Вместе, эти три языка позволяют создавать полноценные веб-страницы с удобным и приятным пользовательским интерфейсом.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+    <script src="script.js" defer></script>
+</body>
+
 </html>
